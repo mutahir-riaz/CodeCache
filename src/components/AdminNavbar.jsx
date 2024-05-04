@@ -5,7 +5,23 @@ import star from '../icons/star.png'
 import googledoc from '../icons/google-docs.png'
 import bag from '../icons/shopping-bag.png'
 import logo from "../icons/logo.svg"
+import { useNavigate } from 'react-router-dom'
 function AdminNavbar() {
+  const navigate = useNavigate('')
+  const dash = () => {
+    navigate('/adminDashboard')
+    console.log("working");
+  }
+  const cate = () => {
+    navigate('/adminCategory')
+    
+  }
+  const dish = () => {
+    navigate('/adminDishes')
+    
+  }
+  
+  
   return (
     <div>
               <nav className=" p-3 fixed w-full mt-5 mb-4"> 
@@ -29,19 +45,19 @@ function AdminNavbar() {
     </li>
     <li className="flex items-center mt-9 ml-4 w-[80px] text-gray-400 p-3 hover:bg-orange-500 hover:text-white cursor-pointer mb-2">
      <img className="w-[40px] h-[40px] ml-2 hover:bg-orange-500" src={img} alt="" />
-     <p className='text-white text-xl pl-8 font-sans'>Dashboard</p>
+     <p onClick={dash}  className='text-white text-xl pl-8 font-sans' >Dashboard</p>
     </li>
 
     {/* Second List Item */}
-    <li className="flex items-center my-8 ml-4 w-[80px] text-gray-400 p-3 hover:bg-orange-500 hover:text-white cursor-pointer mb-2">
-     <img className="w-[40px] h-[40px] ml-2 hover:bg-orange-500" src={info} alt="" />
-     <p className='text-white text-xl pl-8 font-sans'>Dishes</p>
+    <li   className="flex items-center my-8 ml-4 w-[80px] text-gray-400 p-3 hover:bg-orange-500 hover:text-white cursor-pointer mb-2">
+     <img  className="w-[40px] h-[40px] ml-2 hover:bg-orange-500" src={info} alt="" />
+     <p onClick={dish} className='text-white text-xl pl-8 font-sans'>Dishes</p>
     </li>
 
     {/* Third List Item */}
-    <li className="flex items-center my-6 ml-4 w-[120px] text-gray-400 p-3 hover:bg-orange-500 hover:text-white cursor-pointer mb-2">
+    <li  className="flex items-center my-6 ml-4 w-[120px] text-gray-400 p-3 hover:bg-orange-500 hover:text-white cursor-pointer mb-2">
      <img className="w-[40px] h-[40px] ml-2 hover:bg-orange-500" src={star} alt="" />
-     <p className='text-white text-xl pl-8 font-sans'>Most ordered</p>
+     <p className='text-white text-xl pl-8 font-sans' onClick={cate} >Categories</p>
     </li>
 
     {/* Fourth List Item */}

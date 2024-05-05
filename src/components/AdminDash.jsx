@@ -7,6 +7,8 @@ import logo from "../icons/logo.svg"
 import user from "../icons/user.png"
 import phone from "../icons/phone.png"
 import cart from "../icons/cart.png"
+import AdminNavbar from './AdminNavbar'
+
 export default function AdminDash() {
   return (
     <div >
@@ -21,11 +23,11 @@ export default function AdminDash() {
   </nav>
    
 {/* <div> */}
-<div className="bg-gray-800 text-white h-screen w-72 fixed  left-0 overflow-hidden transition-all duration-300">
+{/* <div className="bg-gray-800 text-white h-screen w-72 fixed  left-0 overflow-hidden transition-all duration-300">
 <hr className="border-t border-gray-700" />
 <ul className="mt-4">
     {/* First List Item */}
-    <li className="flex items-center mt-4 ml-4 w-[80px] text-gray-400 p-3  hover:text-white cursor-pointer mb-2">
+    {/* <li className="flex items-center mt-4 ml-4 w-[80px] text-gray-400 p-3  hover:text-white cursor-pointer mb-2">
      <img className="w-[50px] h-[50px] ml-1 " src={logo} alt="" />
       <p className='text-white text-xl pl-8 font-sans'>TastyGrill</p>
     </li>
@@ -34,19 +36,19 @@ export default function AdminDash() {
      <p className='text-white text-xl pl-8 font-sans'>Dashboard</p>
     </li>
 
-    {/* Second List Item */}
+    
     <li className="flex items-center my-8 ml-4 w-[80px] text-gray-400 p-3 hover:bg-orange-500 hover:text-white cursor-pointer mb-2">
      <img className="w-[40px] h-[40px] ml-2 hover:bg-orange-500" src={info} alt="" />
      <p className='text-white text-xl pl-8 font-sans'>Dishes</p>
     </li>
 
-    {/* Third List Item */}
+    
     <li className="flex items-center my-6 ml-4 w-[120px] text-gray-400 p-3 hover:bg-orange-500 hover:text-white cursor-pointer mb-2">
      <img className="w-[40px] h-[40px] ml-2 hover:bg-orange-500" src={star} alt="" />
      <p className='text-white text-xl pl-8 font-sans'>Most ordered</p>
     </li>
 
-    {/* Fourth List Item */}
+   
     <li className="flex items-center my-8 ml-4 w-[80px] text-gray-400 p-3 hover:bg-orange-500 hover:text-white cursor-pointer mb-2">
      <img className="w-[40px] h-[40px] ml-2 hover:bg-orange-500" src={bag} alt="" />
      <p className='text-white text-xl pl-8 font-sans'>Orders</p>
@@ -55,8 +57,10 @@ export default function AdminDash() {
      <img className="w-[40px] h-[40px] ml-2 hover:bg-orange-500" src={googledoc} alt="" />
      <p className='text-white text-xl pl-8 font-sans'>Progress</p>
     </li>
-  </ul>
-</div> <br />
+  </ul> 
+</div> */}
+<AdminNavbar></AdminNavbar>
+ <br />
 <div class="flex space-x-5 ml-[27%] mt-[8%] ">
         <div class="bg-blue-500 text-white  text-2xl p-2  w-72 h-48 rounded-md"><p className='pl-3 pt-3 font-sans'>Sign Ups</p><br />  <p className='text-3xl text-right pr-3 pt-3'>112</p>
         <div className='flex '><i className=' mt-[6px] ml-3'><img src={user} alt="" /></i> <p className='text-gray-200 text-sm mt-[10px]'><span className='text-white text-[18px] ml-10 font-bold'>+25% </span> from the last month</p></div>

@@ -16,6 +16,7 @@ function AddCategory() {
   }
   const storage = getStorage();
   const addCategory = async()=>{
+    console.log(cateDescription,cateName,catepic);
     const userId = auth?.currentUser?.uid;
     const usersCollection = collection(db, 'categories');
     const imageRef = ref(storage, `/profile/${catepic.name}`);
@@ -39,6 +40,7 @@ function AddCategory() {
           cateDescription:cateDescription
         });
         console.log("doc added");
+        toggler()
         // navigate('/SetCode');
       })
       .catch((error) => {
@@ -93,8 +95,8 @@ function AddCategory() {
                 </button>
             </div>
 {/* - Modal body -->            <!- */}
-            <form class="p-4 md:p-5">
-                <div class="grid gap-4 mb-4 grid-cols-2">
+            
+                <div class="p-4 md:p-5 grid gap-4 mb-4 grid-cols-2">
                     <div class="col-span-2">
                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category Name</label>
                         <input type="text" onChange={(e)=>{setCateName(e.target.value)}} name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type category name" required=""/>
@@ -115,7 +117,7 @@ function AddCategory() {
                     <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
                     Add new category
                 </button>
-            </form>
+           
         </div>
     </div>
 </div> 
